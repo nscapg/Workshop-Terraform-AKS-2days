@@ -28,6 +28,7 @@ jobs:
           az aks get-credentials --resource-group ${{ env.RG_NAME }} --name ${{ env.CLUSTER_NAME }}
 
       - name: Creation du secret
+        run: |
           kubectl create secret docker-registry "acr-secret" \
           --namespace coolapi \
           --docker-server=acrenes.azurecr.io \
