@@ -1,4 +1,4 @@
-apiVersion : apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: "coolapi-deployment"
@@ -17,4 +17,6 @@ spec:
         - name: "coolapi"
           image: "acrenes.azurecr.io/coolapi:1.0.0"
           ports:
-          - containerPort: 3000
+            - containerPort: 3000
+      imagePullSecrets:
+        - name: acr-secret
