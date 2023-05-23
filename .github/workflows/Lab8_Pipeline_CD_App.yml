@@ -29,6 +29,8 @@ jobs:
 
       - name: Creation du secret
         run: |
+          cd Kubernetes/Manifests/coolapi
+          kubectl apply -f 1_namespace.yml
           kubectl create secret docker-registry "acr-secret" \
           --namespace coolapi \
           --docker-server=acrenes.azurecr.io \
