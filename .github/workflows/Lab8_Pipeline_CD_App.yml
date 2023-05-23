@@ -33,7 +33,7 @@ jobs:
           --namespace coolapi \
           --docker-server=acrenes.azurecr.io \
           --docker-username=acrenes \
-          --docker-password=dONyOye3FsZkYt6nNbP8pa3MQwv1LDb3OFITvkQkZ2+ACRBvCU2/ 
+          --docker-password=dONyOye3FsZkYt6nNbP8pa3MQwv1LDb3OFITvkQkZ2+ACRBvCU2/
 
       - name: Deploiement application dans AKS
         run: |
